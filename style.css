@@ -1,0 +1,231 @@
+/*
+web font collection
+https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:400,500,600,700
+*/
+
+/*
+* {
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial' , sans-serif;
+}
+*/
+
+body {
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial' , sans-serif;
+	margin: 0px;
+}
+
+header {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	position: fixed;
+	/* display: flex; */
+	height: 5vh;
+	width: 100%;
+	top: 0px;
+	background-color: #2eadae;
+	z-index: 5;
+}
+
+footer {
+	position: fixed;
+	height: 5vh;
+	width: 100%;
+	bottom: 0px;
+	background-color: #2eadae;
+}
+
+main {
+	margin: 6% 0;
+}
+
+/* jQuery SLY START (codes from "http://darsa.in/sly/#!download") */
+/* Header example */
+.example {margin: 80px auto 40px;}
+
+.example button, .example button {background: transparent;border: 0;color: #fff;opacity: .5;}
+.example button:hover, .example button:hover { opacity: 1; }
+.example button:disabled, .example button:disabled { opacity: .2; }
+
+.example .forward, .example .backward {float: left;width: 100px;height: 200px;font-size: 60px;}
+.example .forward { float: right; }
+
+.example .frame { /*display: flex; flex-wrap: wrap;*/ z-index: -1; margin: 0 auto; width: 940px; height: 200px; line-height: 200px; overflow: hidden; text-shadow: none; }
+.example .frame ul { list-style: none; margin: 0; padding: 0; height: 100%; font-size: 50px; }
+.example .frame ul li { float: left; width: 190px; height: 100%; margin: 0 1px 0 0; padding: 0; background: #eee; color: #3a3c47; text-align: center; cursor: pointer; }
+.example .frame ul li.active {color: #fff;background: #24adaf;}
+
+.example .scrollbar { margin: 0 auto 30px; width: 940px; height: 2px; line-height: 0; }
+.example .scrollbar .handle { width: 100px; height: 100%; background: #fff; cursor: pointer; }
+.example .scrollbar .handle .mousearea { position: absolute; top: -9px; left: 0; width: 100%; height: 20px; }
+
+.example .pages { list-style: none; margin: 20px 0; padding: 0; text-align: center; }
+.example .pages li { display: inline-block; width: 14px; height: 14px; margin: 0 4px; text-indent: -999px; border-radius: 10px; cursor: pointer; overflow: hidden;
+	background: #fff; box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+}
+.example .pages li:hover { background: #aaa; }
+.example .pages li.active { background: #666; }
+
+.example .controls { margin: 50px 0 0; text-align: center; }
+.example .controls .divider { display: inline-block; margin: 0 10px; }
+.example .controls button { line-height: 32px; vertical-align: middle; font-family: Novecento, sans-serif; }
+.example .controls button i { position: relative; top: -2px; margin: 5px; padding: 0; font-size: 32px; vertical-align: middle; }
+/* jQuery SLY END (codes from "http://darsa.in/sly/#!download") */
+
+/* jQuery Fancy Box START (codes from "http://fancybox.net")
+.work_item {
+	width: 400px;
+	margin: 40px auto 0 auto;
+	padding: 0 60px 30px 60px;
+	border: solid 1px #cbcbcb;
+	background: #fafafa;
+	-moz-box-shadow: 0px 0px 10px #cbcbcb;
+	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
+}
+jQuery Fancy Box END (codes from "http://fancybox.net") */
+
+.youtube_video * {
+	width: 100%;
+	height: 88vh;
+}
+
+.youtube_video {
+	margin: 2em 0;
+}
+
+.work {
+	/* margin: 2em 0; */
+	display: flex;
+	flex-wrap: wrap;
+	margin: 3em;
+}
+
+.work_item {
+	width: 30%;
+	margin: 1rem 0;
+	/* height: 28vh; */
+	/* border: 1px solid black; */
+	box-sizing: border-box;
+}
+
+.work_item a {
+	display: flex block;
+	width: 100%;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	/* padding: 2vh; */
+	box-sizing: border-box;
+	color: inherit;
+ 	text-decoration: none;
+ 	padding: 0;
+}
+
+.work_info {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	margin-top: 1rem;
+}
+
+.work_info * {
+ 	word-break: keep-all;
+}
+
+.work_title {
+  	font-weight: bold;
+  	text-align: left;
+}
+
+.work_type {
+  	font-style: italic;
+  	color: rgb(100,100,100);
+  	text-align: right;
+}
+
+.work_item h3 {
+  	width: auto;
+  	margin: 0;
+  	font-size: 0.8rem;
+  	font-weight: normal;
+}
+
+.work_item img {
+  	width: 100%;
+  	object-fit: cover;
+}
+
+.work_item:nth-child(3n-1) {
+  	margin-left: 5%;
+  	margin-right: 5%;
+}
+
+.work_item:nth-child(1), .work_item:nth-child(2), .work_item:nth-child(3) {
+  	margin-top: 0;
+}
+
+main.index>section:last-child {
+  	margin-bottom: 8vh;
+}
+
+.info {
+  	margin: 0;
+  	text-align: center;
+}
+
+.info>*:first-child {
+  	margin-top: 0;
+}
+
+.info h1 {
+  	font-size: 5em;
+  	margin-bottom: 3rem;
+}
+
+.info_main {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	height: 100vh;
+ 	margin: 0;
+}
+
+.work_list {
+	font-size: 0.8rem;
+  	padding: 3rem;
+}
+
+a {
+  	color: inherit;
+}
+
+.work_list li {
+  	line-height: 1.5em;
+}
+
+nav {
+  	height: 100%;
+}
+
+nav>ul {
+  	padding: 0;
+  	margin: 0;
+  	height: 100%;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: space-around;
+}
+
+nav>ul>li {
+  	display: inline;
+  	font-size: 2vh;
+}
+
+nav a {
+  	color: inherit;
+  	text-decoration: none;
+}
+
+footer {
+  	position: fixed;
+}
