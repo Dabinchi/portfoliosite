@@ -8,9 +8,10 @@ https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:400,500
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial' , sans-serif;
 }
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet');
 
 body {
-	font-family: 'Helvetica Neue', 'Helvetica', 'Arial' , sans-serif;
+	font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial' , sans-serif;
 	margin: 0px;
 }
 
@@ -18,54 +19,60 @@ header {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	position: fixed;
-	/* display: flex; */
-	height: 5vh;
+	display: block;
+	/*height: 5vh;*/
+	height: 70px;
 	width: 100%;
 	top: 0px;
-	background-color: #2eadae;
+	background: linear-gradient(to top, rgb(255,255,255,0), rgb(255,255,255) 40%);
 	z-index: 5;
 }
 
 footer {
 	position: fixed;
-	height: 5vh;
+	display: block;
+	/*height: 5vh;*/
+	height: 70px;
 	width: 100%;
 	bottom: 0px;
-	background-color: #2eadae;
+	background: linear-gradient(to bottom, rgb(255,255,255,0), rgb(255,255,255) 40%);
 }
 
 main {
 	margin: 6% 0;
+	text-decoration: none;
 }
 
 /* jQuery SLY START (codes from "http://darsa.in/sly/#!download") */
 /* Header example */
-.example {margin: 80px auto 40px;}
+.example {margin: 120px auto 40px;}
 
-.example button, .example button {background: transparent;border: 0;color: #fff;opacity: .5;}
+.example button, .example button {background: transparent;border: 0;color: rgb(0, 0, 0);opacity: .5;}
 .example button:hover, .example button:hover { opacity: 1; }
 .example button:disabled, .example button:disabled { opacity: .2; }
 
-.example .forward, .example .backward {float: left;width: 100px;height: 200px;font-size: 60px;}
+.example .forward, .example .backward {float: left;width: 100px;height: 100px;font-size: 60px;}
 .example .forward { float: right; }
 
-.example .frame { /*display: flex; flex-wrap: wrap;*/ z-index: -1; margin: 0 auto; width: 940px; height: 200px; line-height: 200px; overflow: hidden; text-shadow: none; }
+.example .frame { /*display: flex; flex-wrap: wrap;*/ z-index: -1; margin: 0 auto; width: 940px; height: 200px; line-height: 200px; overflow: hidden; text-shadow: none; /*transform: translate(50%, 50%);*/}
 .example .frame ul { list-style: none; margin: 0; padding: 0; height: 100%; font-size: 50px; }
-.example .frame ul li { float: left; width: 190px; height: 100%; margin: 0 1px 0 0; padding: 0; background: #eee; color: #3a3c47; text-align: center; cursor: pointer; }
-.example .frame ul li.active {color: #fff;background: #24adaf;}
+.example .frame ul li { float: left; width: 190px; height: 100%; margin: 0 1px 0 0; padding: 0; background: #eee; color: #3a3c47; text-align: center; cursor: pointer; display: flex; flex-direction: column; filter: grayscale(); transition: ease-in-out 0.3s; border: 0px solid white;}
+.example .frame ul li img { object-fit: cover; z-index: 1; top: 0; left: 0; width: 100%; height: 100%;}
+.example .frame ul li.playing { border: white 15px solid; filter: none; }
+.example .frame ul li.active {color: rgb(0, 0, 0);background: #24adaf;}
 
 .example .scrollbar { margin: 0 auto 30px; width: 940px; height: 2px; line-height: 0; }
-.example .scrollbar .handle { width: 100px; height: 100%; background: #fff; cursor: pointer; }
+.example .scrollbar .handle { width: 100px; height: 100%; background: rgb(0, 0, 0); cursor: pointer; }
 .example .scrollbar .handle .mousearea { position: absolute; top: -9px; left: 0; width: 100%; height: 20px; }
 
 .example .pages { list-style: none; margin: 20px 0; padding: 0; text-align: center; }
 .example .pages li { display: inline-block; width: 14px; height: 14px; margin: 0 4px; text-indent: -999px; border-radius: 10px; cursor: pointer; overflow: hidden;
-	background: #fff; box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
+	background: rgb(0, 0, 0); box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
 }
 .example .pages li:hover { background: #aaa; }
 .example .pages li.active { background: #666; }
 
-.example .controls { margin: 50px 0 0; text-align: center; }
+.example .controls { margin: 50px 0 0; text-align: center; color: rgb(0, 0, 0);}
 .example .controls .divider { display: inline-block; margin: 0 10px; }
 .example .controls button { line-height: 32px; vertical-align: middle; font-family: Novecento, sans-serif; }
 .example .controls button i { position: relative; top: -2px; margin: 5px; padding: 0; font-size: 32px; vertical-align: middle; }
@@ -82,6 +89,7 @@ main {
 	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
 }
 jQuery Fancy Box END (codes from "http://fancybox.net") */
+
 
 .youtube_video * {
 	width: 100%;
@@ -167,6 +175,11 @@ main.index>section:last-child {
   	margin-bottom: 8vh;
 }
 
+a.subtitle {
+	font-weight: bolder;
+	line-height: 3em;
+}
+
 .info {
   	margin: 0;
   	text-align: center;
@@ -177,7 +190,7 @@ main.index>section:last-child {
 }
 
 .info h1 {
-  	font-size: 5em;
+  	font-size: 2em;
   	margin-bottom: 3rem;
 }
 
@@ -187,6 +200,10 @@ main.index>section:last-child {
   	align-items: center;
   	height: 100vh;
  	margin: 0;
+}
+
+.work-line {
+	line-height: 2.5em;
 }
 
 .work_list {
@@ -218,7 +235,24 @@ nav>ul {
 
 nav>ul>li {
   	display: inline;
-  	font-size: 2vh;
+  	font-size: 30px;
+  	font-weight: 400;
+}
+
+.menu_bar li>a {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2vw;
+	font-weight: 400;
+}
+@media screen and (min-width: 1500px) {
+  .menu_bar li>a {
+    font-size: 30px;
+  }
+}
+
+.sns {
+	/*color: rgb(200, 200, 200);*/
+	font-weight: 300;
 }
 
 nav a {
@@ -228,4 +262,11 @@ nav a {
 
 footer {
   	position: fixed;
+}
+
+.logo {
+	text-decoration: none !important;
+}
+.menu-item {
+	text-decoration: none !important;
 }

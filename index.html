@@ -1,26 +1,23 @@
 <DOCTYPE html>
 <html lang="ko">
 <head>
-  	<meta charset="utf-8">
-  	STANDARD @IMPORT
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  	<!-- Google Web Font 'Montserrat' -->
+    <meta charset="utf-8">
+    <!-- Google Web Font 'Montserrat' -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   	<link rel="stylesheet" href="style.css">
 
   	<script src="./js/jquery-3.3.1.min.js"></script>
    	<script src="./js/sly.min.js"></script>
 
-   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+	  <script type="text/javascript" src="./dist/ekko-lightbox.js"></script>
+	  <script type="text/javascript" src="./dist/ekko-lightbox.min.js"></script>
+	  <link rel="stylesheet" href="./dist/ekko-lightbox.css" />
 
-	<script type="text/javascript" src="./dist/ekko-lightbox.js"></script>
-	<script type="text/javascript" src="./dist/ekko-lightbox.min.js"></script>
-	<link rel="stylesheet" href="./dist/ekko-lightbox.css" />
-
-	<title>DABIN KIM</title>
+	  <title>DABIN KIM</title>
 	<!--
    	jQuery Fancy Box START (codes from "http://fancybox.net")
 	<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
@@ -44,10 +41,12 @@
   	<header class="projecttitle">
     	<nav>
       		<ul>
-        		<li><a href="index.html">Dabin Kim Lab</a></li>
+        		<li><a class="logo" href="index.html">DABINKIM</a></li>
       		</ul>
     	</nav>
-
+      <audio id="BGM">
+        <source src="" type="">
+      </audio>
 	</header>
 
 	<!-- main content -->
@@ -68,36 +67,37 @@
 				</div>
 			</div> -->
 
-			<button class="backward"><i class="icon-angle-left"></i></button>
-			<button class="forward"><i class="icon-angle-right"></i></button>
+			<!-- <button class="backward"><i class="icon-angle-left"></i></button>
+			<button class="forward"><i class="icon-angle-right"></i></button> -->
 
 			<div class="frame">
+
 				<ul>
-					<li class="active">0</li>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
+					<li class="active playButton" id="0_BGM" onclick="playPause(0);"><img src="musicimage/0-music.png"></li>
+					<li class="playButton" id="1_BGM" onclick="playPause(1);"><img src="musicimage/1-music.png"></li>
+          <li class="playButton" id="2_BGM" onclick="playPause(2);"><img src="musicimage/2-music.png"></li>
+          <li class="playButton" id="3_BGM" onclick="playPause(3);"><img src="musicimage/3-music.png"></li>
+          <li class="playButton" id="4_BGM" onclick="playPause(4);"><img src="musicimage/4-music.png"></li>
+          <!-- <li class="playButton" id="5_BGM" onclick="playPause(5);"><img src="musicimage/5-music.png"></li>
+          <li class="playButton" id="6_BGM" onclick="playPause(6);"><img src="musicimage/6-music.png"></li>
+          <li class="playButton" id="7_BGM" onclick="playPause(7);"><img src="musicimage/7-music.png"></li>
+          <li class="playButton" id="8_BGM" onclick="playPause(8);"><img src="musicimage/8-music.png"></li>
+          <li class="playButton" id="9_BGM" onclick="playPause(9);"><img src="musicimage/9-music.png"></li>
+          <li class="playButton" id="10_BGM" onclick="playPause(10);"><img src="musicimage/10-music.png"></li> -->
 				</ul>
 			</div>
 
 			<div class="controls">
-				<button data-action="toStart"><i class="icon-double-angle-left"></i> Start</button>
+				<button data-action="toStart"><i class="icon-double-angle-left"></i><<</button>
 				<span class="divider"></span>
-				<button class="prev"><i class="icon-angle-left"></i> Prev</button>
+				<button class="prev"><i class="icon-angle-left"></i><</button>
 				<span class="divider"></span>
 				<button data-action="add"><i class="icon-plus-sign"></i></button>
 				<button data-action="remove"><i class="icon-minus-sign"></i></button>
 				<span class="divider"></span>
-				<button class="next">Next <i class="icon-angle-right"></i></button>
+				<button class="next">><i class="icon-angle-right"></i></button>
 				<span class="divider"></span>
-				<button data-action="toEnd">End <i class="icon-double-angle-right"></i></button>
+				<button data-action="toEnd">>><i class="icon-double-angle-right"></i></button>
 			</div>
 		</div>
 		<!-- jQuery SLY END (codes from "http://darsa.in/sly/#!download") -->
@@ -177,7 +177,7 @@
         		</a>
       		</div>
       		<div class="work_item">
-        		<a href="https://www.facebook.com/ATdasee/videos/1359519500827532/" data-toggle="lightbox" data-max-width="600">
+        		<a href="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FATdasee%2Fvideos%2F1359519500827532%2F&show_text=0&width=560" data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4">
           			<img src="image/jealousyIsMyPower.jpg" alt="" class="img-fluid">
           			<section class="work_info">
             			<h3 class="work_title">다&nbsp;:&nbsp;시 《질투는&nbsp;나의&nbsp;힘》 (2017)</h3>
@@ -208,16 +208,16 @@
 
 	<!-- footer area -->
 	<footer>
-    	<nav>
-      		<ul>
-        		<li><a href="info.html">INFO/CONTACT</a></li>
-        		<li><a href="work.html">WORK</a></li>
-        		<li><a href="https://www.youtube.com/channel/UCxTXIlKXdh7S0Dl5E4XcJJg" target="_blank">YOUTUBE</a></li>
-        		<li><a href="https://soundcloud.com/davinci-dabin-kim" target="_blank">SOUNDCLOUD</a></li>
-        		<li><a href="https://www.instagram.com/dabini98/" target="_blank">INSTAGRAM</a></li>
-      		</ul>
-    	</nav>
-	</footer>
+      <nav>
+          <ul class="menu_bar">
+            <li><a class="menu-item" href="info.html">INFO/CONTACT</a></li>
+            <li><a class="menu-item" href="work.html">WORK</a></li>
+            <li><a class="menu-item" class="sns" href="https://www.youtube.com/channel/UCxTXIlKXdh7S0Dl5E4XcJJg" target="_blank">YOUTUBE</a></li>
+            <li><a class="menu-item" class="sns" href="https://soundcloud.com/davinci-dabin-kim" target="_blank">SOUNDCLOUD</a></li>
+            <li><a class="menu-item" class="sns" href="https://www.instagram.com/dabini98/" target="_blank">INSTAGRAM</a></li>
+          </ul>
+      </nav>
+  </footer>
 
 	<script> $(document).on('click', '[data-toggle="lightbox"]', function(event) { event.preventDefault(); $(this).ekkoLightbox(); }); </script>
 	<script src="./js/main.js"></script>

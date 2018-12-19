@@ -24,7 +24,7 @@ jQuery(function ($) {
 		mouseDragging: 1,
 		touchDragging: 1,
 		releaseSwing: 1,
-		startAt: 0,
+		startAt: 2,
 		scrollBar: $example.find('.scrollbar'),
 		scrollBy: 1,
 		pagesBar: $example.find('.pages'),
@@ -61,3 +61,23 @@ jQuery(function ($) {
 		}
 	});
 });
+
+let audioPlayer = document.getElementById('BGM');
+let musicIndex = -1;
+
+function playPause(index) {
+	if (musicIndex != index) {
+		$('#' + musicIndex + '_BGM').removeClass('playing');
+		musicIndex = index;
+		audioPlayer.pause();
+		audioPlayer.src = "music/" + musicIndex + "-music.mp3";
+	} else {
+		if (audioPlayer.paused) {
+			audioPlayer.play();
+			$('#' + musicIndex + '_BGM').addClass('playing');
+		} else {
+			audioPlayer.pause();
+			$('#' + musicIndex + '_BGM').removeClass('playing');
+		}
+	}
+}
