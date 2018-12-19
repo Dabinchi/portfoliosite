@@ -100,6 +100,14 @@ jQuery Fancy Box END (codes from "http://fancybox.net") */
 	margin: 2em 0;
 }
 
+.img-fluid:hover {
+	-webkit-transform: scale(0.97);
+    -ms-transform: scale(0.97);
+    transform: scale(0.97);
+    /*transition: all 0.2s;*/
+}
+
+
 .work {
 	/* margin: 2em 0; */
 	display: flex;
@@ -113,6 +121,10 @@ jQuery Fancy Box END (codes from "http://fancybox.net") */
 	/* height: 28vh; */
 	/* border: 1px solid black; */
 	box-sizing: border-box;
+}
+
+.work_item a>img {
+	transition:all 0.2s ease;
 }
 
 .work_item a {
@@ -243,11 +255,27 @@ nav>ul>li {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2vw;
 	font-weight: 400;
+	transition: all 0.2s;
 }
 @media screen and (min-width: 1500px) {
   .menu_bar li>a {
     font-size: 30px;
   }
+}
+.menu_bar li>a:hover {
+	color: rgb(201, 70, 61);  
+}
+.menu_bar li>a:before {
+  	content: '';
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	transform: scale(0);
+  	transition: all 0.2s;
+}
+.menu_bar li>a:hover:before {
+  	background: rgb(201, 70, 61);
+  	transform: scale(1);
 }
 
 .sns {
@@ -267,6 +295,22 @@ footer {
 .logo {
 	text-decoration: none !important;
 }
+.logo:hover {
+	color: rgb(201, 70, 61);  
+}
+.logo:before {
+  	content: '';
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	transform: scale(0);
+  	transition: all 0.2s;
+}
+.logo:hover:before {
+  	background: rgb(201, 70, 61);
+  	transform: scale(1);
+}
+
 .menu-item {
 	text-decoration: none !important;
 }
